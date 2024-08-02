@@ -1,9 +1,9 @@
-const  mongoose  = require("mongoose");
+const  {default:mongoose}  = require("mongoose");
 
-const Userschema=mongoose.Schema({
-Username:{
+const Authschema=  mongoose.Schema({
+Name:{
     type:String,
-    require:true,
+    
 },
 Email:{
     type:String,
@@ -16,4 +16,4 @@ Password:{
 
 });
 
-module.exports=mongoose.model("Userdata",Userschema);
+module.exports=mongoose.model("authdb",Authschema);
